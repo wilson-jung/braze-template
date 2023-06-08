@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    font-display: swap;
+    src: url("tada-internal:///android_font/spoqa_han_sans_bold.otf"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf") format("truetype"); 
+  }
+  
+  @font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    font-display: swap;
+    src: url("tada-internal:///android_font/spoqa_han_sans_regular.otf"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.ttf") format("truetype"); 
+  }
+   
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent; 
+  }
+  
+  .fade {
+    opacity: 0 !important;
+    background-color: transparent !important; 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  #wrapper {
+    -webkit-text-size-adjust: 100%;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    height: 100vh;
+    font-family: 'SpoqaHanSans', 'Spoqa Han Sans', sans-serif;
+    text-align: center;
+    opacity: 1; 
+  }
+  #wrapper .dimBackground {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: 0.4;
+    transition: background-color 0.2s, opacity 0.2s; 
+  }
+  #wrapper .popup {
+    position: absolute;
+    width: calc(100% - 80px);
+    color: #262A38;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
+    transition-delay: 0.05s; 
+  }
+  #wrapper .popup .popupImg {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px; 
+  }
+  #wrapper .popup .bottom {
+    padding: 25px 25px 20px;
+  }
+  .popup .title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .popup .desc {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .popup .button-gropup {
+    display: flex;
+    height: 60px;
+  }
+  .button-gropup .item {
+    flex: 1;
+    height: 100%;
+    line-height: 60px;
+    font-size: 15px;
+  }
+  .popup .confirm-cancel {
+    color: #73788B;
+  }
+  .popup .confirm-button {
+    color: #32A2FA;
+    font-weight: 700;
+  }
+  
