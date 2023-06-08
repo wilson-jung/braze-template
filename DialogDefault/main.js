@@ -1,5 +1,6 @@
-window.addEventListener("DOMContentLoaded", function(){
 // window.addEventListener("ab.BridgeReady", function(){
+// FIXME:
+window.addEventListener("DOMContentLoaded", function(){
   setTimeout(() => {
     let children = document.getElementById('wrapper').children
     for (let i = 0; i < children.length; i++) {
