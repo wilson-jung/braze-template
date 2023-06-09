@@ -1,30 +1,28 @@
+const WRAPPER = 'wrapper'
 // window.addEventListener("ab.BridgeReady", function(){
 // FIXME:
 window.addEventListener("DOMContentLoaded", function(){
-  setTimeout(() => {
-    let children = document.getElementById('wrapper').children
-    for (let i = 0; i < children.length; i++) {
-      children[i].classList.remove('fade')
-    }
-  }, 400);
+  setTimeout(slideIn, 1000);
 }, false);
 
-function fade() {
-  let children = document.getElementById('wrapper').children;
-  for (let i = 0; i < children.length; i++) {
-    children[i].classList.add('fade')
-  }
+function slideIn() {
+  const elem = document.getElementById(WRAPPER)
+  elem.classList.add('slideIn')
+}
+
+function slideOut() {
+  document.getElementById(WRAPPER).classList.remove('slideIn')
 }
 
 function closeWithoutEvent() {
-  fade();
+  slideOut();
   setTimeout(() => {
     window.location = 'appboy://close?abButtonId=0';
   }, 600);
 }
 
 function closeWithEvent(customEvent) {
-  fade();
+  slideOut();
   setTimeout(() => {
     appboyBridge.logCustomEvent(customEvent, {});
     window.location = 'appboy://close';
@@ -38,7 +36,7 @@ function closeWithEvent(customEvent) {
  * openLink('tada-rider://coupons?abButtonId=1&abExternalOpen=true&abDeepLink=true')
  */
 function openLink(popupLink) {
-  fade();
+  slideOut();
   setTimeout(() => {
     window.location = popupLink;
   }, 600);
