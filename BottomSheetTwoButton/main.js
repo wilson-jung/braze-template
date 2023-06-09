@@ -23,15 +23,21 @@ function slideUp() {
   elem.classList.add('slideUp')
 }
 
+function slideDown() {
+  document.getElementById(WRAPPER).classList.remove('slideUp')
+  fade()
+}
+
 function closeWithoutEvent() {
-  fade();
+  slideDown();
   setTimeout(() => {
     window.location = 'appboy://close?abButtonId=0';
   }, 600);
 }
 
+
 function closeWithEvent(customEvent) {
-  fade();
+  slideDown();
   setTimeout(() => {
     appboyBridge.logCustomEvent(customEvent, {});
     window.location = 'appboy://close';
@@ -45,7 +51,7 @@ function closeWithEvent(customEvent) {
  * openLink('tada-rider://coupons?abButtonId=1&abExternalOpen=true&abDeepLink=true')
  */
 function openLink(popupLink) {
-  fade();
+  slideDown();
   setTimeout(() => {
     window.location = popupLink;
   }, 600);

@@ -1,0 +1,137 @@
+.bottomSheet .main-img {
+  /* 상단 이미지 백그라운드 컬러 수정 */
+  background-color: #32A2FA;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    font-display: swap;
+    src: url("tada-internal:///android_font/spoqa_han_sans_bold.otf"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 400;
+  font-display: swap;
+  src: url("tada-internal:///android_font/spoqa_han_sans_regular.otf"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fade {
+  opacity: 0 !important;
+  background-color: transparent !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrapper {
+  -webkit-text-size-adjust: 100%;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  height: 100vh;
+  font-family: 'SpoqaHanSans', 'Spoqa Han Sans', sans-serif;
+  text-align: center;
+  opacity: 1;
+}
+#wrapper .dimBackground {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.4;
+  transition: background-color 0.25s, opacity 0.25s;
+}
+#wrapper .bottomSheet {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  color: #262A38;
+  background-color: #fff;
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.25s;
+  transition-delay: 0.05s;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+#wrapper.slideUp .bottomSheet {
+  bottom: 0;
+  opacity: 1;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+}
+#wrapper .bottomSheet .popupImg {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.bottomSheet .top {
+  padding: 20px 0 0;
+}
+.bottomSheet .main-img {
+  position: relative;
+  padding: 10px;
+}
+.main-img .iconImg {
+  display: inline-block;
+  vertical-align: top;
+}
+.bottomSheet .btn-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+.bottomSheet .bottom {
+  padding: 10px 25px 20px;
+  text-align: center;
+}
+.bottom .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.bottom .desc {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.bottomSheet .button-group {
+  display: flex;
+  padding: 10px;
+}
+.button-group .item {
+  flex: 1;
+  height: 100%;
+  border-radius: 4px;
+  line-height: 54px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.button-group .item + .item {
+  margin-left: 10px;
+}
+.button-group .confirm-cancel {
+  color: #283873;
+  background-color: #E6E9EF;
+}
+.button-group .confirm-button {
+  flex: 2;
+  color: #fff;
+  background-color: #19254D;
+}

@@ -1,8 +1,13 @@
+.bottomSheet .main-img {
+  /* 상단 이미지 백그라운드 컬러 수정 */
+  background-color: #32A2FA;
+}
+
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 700;
     font-display: swap;
-    src: url("tada-internal:///android_font/spoqa_han_sans_bold.otf"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf") format("truetype"); 
+    src: url("tada-internal:///android_font/spoqa_han_sans_bold.otf"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf") format("truetype");
 }
 
 @font-face {
@@ -74,38 +79,59 @@ a {
   display: block;
   margin: 0 auto;
 }
-#wrapper .bottomSheet .bottom {
-  padding: 30px 25px 20px;
-}
 .bottomSheet .top {
   padding: 20px 0 0;
 }
-.bottomSheet .title {
-  text-align: left;
+.bottomSheet .main-img {
+  position: relative;
+  padding: 10px;
+}
+.main-img .iconImg {
+  display: inline-block;
+  vertical-align: top;
+}
+.bottomSheet .btn-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+.bottomSheet .bottom {
+  padding: 10px 25px 20px;
+  text-align: center;
+}
+.bottom .title {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
-.bottomSheet .desc {
-  text-align: left;
+.bottom .desc {
   margin-top: 15px;
   font-size: 15px;
   line-height: 22px;
 }
-.bottomSheet .button-gropup {
+.bottomSheet .button-group {
   display: flex;
-  height: 60px;
+  padding: 10px;
 }
-.button-gropup .item {
+.button-group .item {
   flex: 1;
   height: 100%;
-  line-height: 60px;
-  font-size: 15px;
-}
-.button-gropup .confirm-cancel {
-  color: #73788B;
-}
-.button-gropup .confirm-button {
-  color: #32A2FA;
+  border-radius: 4px;
+  line-height: 54px;
+  font-size: 16px;
   font-weight: 700;
+}
+
+.button-group .item + .item {
+  margin-left: 10px;
+}
+.button-group .confirm-cancel {
+  color: #283873;
+  background-color: #E6E9EF;
+}
+.button-group .confirm-button {
+  flex: 2;
+  color: #fff;
+  background-color: #19254D;
 }

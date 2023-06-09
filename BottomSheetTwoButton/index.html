@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <link rel="stylesheet" href="./main.css">
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="dimBackground" class="dimBackground fade"></div>
+    <div class="bottomSheet">
+        <div class="top">
+            <div class="main-img">
+
+              <!--                이미지 삽입               -->
+              <img class="iconImg" src="https://placehold.co/150x120" />
+              <!-- ///////////////////////////////////// -->
+
+              <img src="./ic_exit_transparent.svg" alt="" class="btn-close" width="44" height="44" onclick="closeWithoutEvent()" />
+            </div>
+        </div>
+          <div class="bottom">
+            <div class="title">타이틀 문구 영역</div>
+            <div class="desc">(옵션) 설명 문구 영역입니다.<br/>최대 2줄 길이를 권장합니다.</div>
+          </div>
+      <div class="button-group">
+    <div class="item confirm-cancel" onclick="closeWithoutEvent()">취소</div>
+        <div class="item confirm-button" onclick="closeWithoutEvent()">버튼 문구</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
