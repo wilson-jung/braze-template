@@ -46,8 +46,11 @@ a {
   opacity: 1;
 }
 #wrapper .dimBackground {
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  top: -50vh;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
   background: #000;
   opacity: 0.4;
   transition: background-color 0.25s, opacity 0.25s;
