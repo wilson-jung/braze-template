@@ -34,7 +34,7 @@ src를 수정.
 - 버튼 동작
 ```html
 // intex.html 파일에서
-<div class="item confirm-button" onclick="closeWithoutEvent()">버튼 문구</div>
+<div class="item confirm-button" onclick="closeWithoutEvent('test_credit_230704', 'tada-rider://coupons?abButtonId=1&abExternalOpen=true&abDeepLink=true')">버튼 문구</div>
 ``` 
 의 `onclick=""` 부분을 수정
 
@@ -44,3 +44,5 @@ src를 수정.
     - closeWithEvent('no_more_xxx') 형식으로 사용
   - 딥링크로 보내기
     - 예> 쿠폰함으로 이동. openLink('tada-rider://coupons?abButtonId=1&abExternalOpen=true&abDeepLink=true')
+  - 딥링크 + 브레이즈 이벤트
+    - openDeepLinkWithEventLog('eventName', 'deeplinkurl')

@@ -55,3 +55,16 @@ function openLink(popupLink) {
     window.location = popupLink;
   }, 600);
 }
+
+/**
+ *
+ * @param customEvent 이벤트
+ * @param popupLink 딥링크
+ */
+function openDeepLinkWithEventLog(customEvent, popupLink) {
+  slideDown()
+  setTimeout(() => {
+    appboyBridge.logCustomEvent(customEvent, {});
+    window.location = popupLink
+  }, 600)
+}
